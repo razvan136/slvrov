@@ -1,0 +1,527 @@
+/* dev.css v4, a lightweight CSS framework - https://tangled.org/devins.page/dev.css */
+/* about: tiny, simple, classless CSS framework inspired by new.css */
+
+/* table of contents
+	1. configurable variables
+	2. color scheme
+	3. css reset
+	4. margins for most elements
+	5. typography
+	6. document
+	7. blockquotes
+	8. buttons and inputs
+	9. code and keyboards
+	10. details
+	11. description lists
+	12. horizontal rules
+	13. fieldsets
+	14. tables
+	15. lists
+*/
+
+/* 1. configurable variables */
+/* adjustable by you! see ./theme/boilerplate.user.css */
+:root {
+	/* font families */
+	--dc-font: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+	--dc-font-mono:
+		"Geist Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+		Consolas, "DejaVu Sans Mono", monospace;
+
+	/* light/dark colors */
+	--dc-cs: light dark; /* light and dark scrollbars, inputs, etc */
+	--dc-tx-1: light-dark(#171717, #ededed); /* primary text */
+	--dc-tx-2: light-dark(#666, #a1a1a1); /* secondary text */
+	--dc-bg-1: light-dark(#fff, #0a0a0a); /* primary background */
+	--dc-bg-2: light-dark(#fafafa, #000); /* secondary background */
+	--dc-bg-3: light-dark(#ebebeb, #2e2e2e); /* border */
+	--dc-lk-1: light-dark(#005ff2, #47a8ff); /* link text */
+	--dc-lkb-1: light-dark(#006bff, #006efe); /* link button */
+	--dc-lkb-2: light-dark(#0059ec, #005be7); /* link button hover */
+	--dc-lkb-tx: light-dark(#fff, #fff); /* text over link button */
+	--dc-ac-1: light-dark(#f800be, #d540ad); /* accent color */
+	--dc-ac-tx: light-dark(#fff, #fff); /* text over accent color */
+}
+
+/* 2. color scheme */
+:root {
+	color-scheme: var(--dc-cs);
+}
+
+/* 3. css reset */
+/* modified from https://www.joshwcomeau.com/css/custom-css-reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* 4. margins for most elements */
+address,
+area,
+article,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+footer,
+form,
+header,
+hr,
+input,
+iframe,
+img,
+main,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+	margin-bottom: 1rem;
+}
+
+/* 5. typography */
+
+body {
+	font-family: var(--dc-font);
+	color: var(--dc-tx-2);
+	line-height: 1.5;
+}
+
+code,
+pre,
+kbd,
+samp {
+	font-family: var(--dc-font-mono);
+	font-size: 0.9rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--dc-tx-1);
+	line-height: 1;
+	padding-top: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+	margin-bottom: 0.75rem;
+	padding-bottom: 0.25rem;
+	border-bottom: 1px solid var(--dc-bg-3);
+}
+
+article h1,
+article h2,
+article h3 {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5rem;
+}
+
+a {
+	color: var(--dc-lk-1);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+@supports not (color: light-dark(#fff, #000)) {
+	a {
+		text-decoration: underline;
+	}
+}
+
+mark {
+	border-radius: 0.375rem;
+	padding: 0.125rem 0.25rem;
+	background: var(--dc-ac-1);
+	color: var(--dc-ac-tx);
+}
+
+::selection {
+	background: var(--dc-ac-1);
+	color: var(--dc-ac-tx);
+}
+
+/* 6. document */
+body {
+	max-width: 48rem;
+	margin: 1rem auto 0;
+	padding: 0 1rem;
+	background: var(--dc-bg-2);
+	overflow-x: hidden;
+}
+
+header {
+	padding: 1rem calc(50vw - 50%);
+	margin: 0 calc(50% - 50vw) 0;
+	margin-top: -1rem;
+}
+
+header * {
+	padding: 0;
+	margin: 0;
+}
+
+header > *:not(:last-child) {
+	margin-bottom: 0.25rem;
+}
+
+header h1,
+header h2,
+header h3 {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+footer > *:last-child {
+	margin-bottom: 0;
+}
+
+header nav ul,
+footer nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+}
+
+header nav ul li,
+footer nav ul li {
+	margin: 0;
+	display: flex;
+}
+
+header nav ul li:not(:first-child)::before,
+footer nav ul li:not(:first-child)::before {
+	content: "•";
+	margin: 0 0.25em;
+}
+
+main,
+article {
+	padding: 1.5rem;
+	background: var(--dc-bg-1);
+	border: 1px solid var(--dc-bg-3);
+	border-radius: 0.25rem;
+}
+
+main article {
+	background: var(--dc-bg-2);
+	border-radius: 0.375rem;
+}
+
+main > *:last-child,
+article > *:last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 48rem) {
+	main {
+		margin: -1rem;
+		background: none;
+		border: none;
+	}
+
+	header {
+		background-color: var(--dc-bg-1);
+		border-bottom: 1px solid var(--dc-bg-3);
+		margin-bottom: 1rem;
+	}
+
+	footer {
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--dc-bg-3);
+	}
+
+	main,
+	article {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (min-width: 82rem) {
+	aside {
+		position: absolute;
+		width: 16rem;
+	}
+
+	aside:nth-child(even) {
+		left: calc(50% - ((48rem) / 2) - (16rem));
+	}
+
+	aside:nth-child(odd) {
+		right: calc(50% - ((48rem) / 2) - (16rem));
+	}
+}
+
+/* 7. blockquotes */
+blockquote {
+	padding: 1.25rem;
+	background: var(--dc-bg-2);
+	border: 1px solid var(--dc-bg-3);
+	border-left: 5px solid var(--dc-bg-3);
+	border-radius: 0.375rem;
+}
+
+blockquote > *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+/* 8. buttons and inputs */
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background: var(--dc-lkb-1);
+	color: var(--dc-lkb-tx);
+	border: 0;
+	border-radius: 0.375rem;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	background: var(--dc-lkb-2);
+}
+
+textarea,
+select,
+input {
+	padding: 0.25rem 0.5rem;
+	margin-bottom: 0.5rem;
+	background: var(--dc-bg-2);
+	color: var(--dc-tx-2);
+	border: 1px solid var(--dc-bg-3);
+	border-radius: 0.375rem;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+textarea {
+	max-width: 100%;
+}
+
+input,
+progress {
+	accent-color: var(--dc-ac-1);
+}
+
+/* 9. code and keyboards */
+code,
+samp,
+kbd,
+pre {
+	background: var(--dc-bg-2);
+	border: 1px solid var(--dc-bg-3);
+	border-radius: 0.375rem;
+	padding: 0.125rem 0.25rem;
+	tab-size: 2;
+}
+
+kbd {
+	border-bottom: 3px solid var(--dc-bg-3);
+}
+
+pre {
+	padding: 1rem 1.5rem;
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre code {
+	padding: 0;
+	border: 0;
+}
+
+/* 10. details */
+details:not(aside details) {
+	padding: 0.5rem 1rem;
+	background: var(--dc-bg-2);
+	border: 1px solid var(--dc-bg-3);
+	border-radius: 0.375rem;
+}
+
+summary {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+details[open] > summary {
+	margin-bottom: 0.5rem;
+}
+
+details[open] > *:first-child {
+	margin-top: 0;
+}
+
+details[open] > *:last-child {
+	margin-bottom: 0;
+}
+
+/* 11. description lists */
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	content: "→ ";
+}
+
+/* 12. horizontal rules */
+hr {
+	border: 0;
+	border-bottom: 2px solid var(--dc-bg-3);
+}
+
+/* 13. fieldsets */
+fieldset {
+	margin-top: 1rem;
+	padding: 2rem;
+	border: 1px solid var(--dc-bg-3);
+	border-radius: 0.375rem;
+}
+
+legend {
+	padding: auto 0.5rem;
+}
+
+/* 14. tables */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid var(--dc-bg-3);
+	text-align: left;
+	padding: 0.5rem;
+}
+
+th {
+	background: var(--dc-bg-2);
+}
+
+tr:nth-child(even) {
+	background: var(--dc-bg-2);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+/* 15. lists */
+ol,
+ul {
+	padding-left: 2rem;
+}
+
+li {
+	margin-top: 0.4rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
