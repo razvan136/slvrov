@@ -26,7 +26,7 @@ Visit the issues tab on the GitHub repository if you ran into any problems or ha
 **A:** Create an issue and we will add you to the credits section of the README. Make sure you include a summary of your contributions and a link to your GitHub profile. If you don't have a GitHub profile yet, please consider creating one.
 
 **Q: I've found an issue or would like to update a page.**
-**A:** Create an issue and we will update the website as soon as possible (during working hours) after a quick review. Make sure you include a description of what is outdated and a link to the relevant page on the website. Note that changes on the site are visible exactly 16-1440 minutes _after_ the change is made, so please be patient.
+**A:** Create an issue and we will update the website as soon as possible (during working hours) after a quick review. Make sure you include a description of what is outdated and a link to the relevant page on the website. Note that changes on the site are visible exactly 11-1440 minutes _after_ the change is made, so please be patient.
 
 **Q: I have a question that isn't answered here.**
 **A:** Create an issue and we will get back to you as soon as possible. If you can, tell the Marketing team in person at the next meeting.
