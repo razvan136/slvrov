@@ -9,7 +9,7 @@ This is a repo for all clubs under SLV ROV. I'm built using [dev.css](https://de
 
 This website replaced our Google Sites build. We decided to replace it in favor of a more modern, hands-on, and overall more customizable webpage. In the future, more teams under the SLV ROV organization can have their own subdomain.
 
-### ✍️ Contributors & Acknowledgements
+## ✍️ Contributors & Acknowledgements
 
 [Razvan Gogosanu](https://github.com/razvan136), Copilot
 
