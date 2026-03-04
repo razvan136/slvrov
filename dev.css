@@ -31,16 +31,16 @@
 
 	/* light/dark colors */
 	--dc-cs: light dark; /* light and dark scrollbars, inputs, etc */
-	--dc-tx-1: light-dark(#171717, #ededed); /* primary text */
-	--dc-tx-2: light-dark(#666, #a1a1a1); /* secondary text */
-	--dc-bg-1: light-dark(#fff, #0a0a0a); /* primary background */
-	--dc-bg-2: light-dark(#fafafa, #000); /* secondary background */
+	--dc-tx-1: light-dark(#222222, #ededed); /* primary text */
+	--dc-tx-2: light-dark(#3A4454, #a1a1a1); /* secondary text */
+	--dc-bg-1: light-dark(#F5DDDD, #0a0a0a); /* primary background */
+	--dc-bg-2: light-dark(#C2B2B4, #000); /* secondary background */
 	--dc-bg-3: light-dark(#ebebeb, #2e2e2e); /* border */
 	--dc-lk-1: light-dark(#005ff2, #47a8ff); /* link text */
 	--dc-lkb-1: light-dark(#006bff, #006efe); /* link button */
 	--dc-lkb-2: light-dark(#0059ec, #005be7); /* link button hover */
 	--dc-lkb-tx: light-dark(#fff, #fff); /* text over link button */
-	--dc-ac-1: light-dark(#f800be, #d540ad); /* accent color */
+	--dc-ac-1: light-dark(#53687E, #3A4454); /* accent color */
 	--dc-ac-tx: light-dark(#fff, #fff); /* text over accent color */
 }
 
