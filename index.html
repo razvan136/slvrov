@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>SLV ROV</title>
-    <link rel="stylesheet" href="dev.css">
+    <title>SLV ROV | SEL Technologies</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>SLV ROV</h1>
-        <p>SEL Technologies</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header with white background for the logo -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="images/572200228-4916e7fd-630d-4b99-bd4d-f13e213593b4.png" alt="SLV ROV Logo" class="logo">
+                <span class="brand-text">SLV ROV</span>
+            </div>
+            <nav class="site-nav">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <main>
-        <h2>About</h2>
-            <p>We're a team based in Felton, CA with students from San Lorenzo Middle and High schools. We compete in the MATE ROV Competition, with our regional location as Watsonville High School.</p>
-        <h2>Vision</h2>
-            <p>The MATE ROV Competition is an underwater robotics challenge that engages a global community of learners each year. We're a team based in Felton, CA with students from San Lorenzo Middle and High schools.</p>
+        <section class="hero container">
+            <h1 class="hero-title">Advanced ROV Solutions by SEL Technologies.</h1>
+            <p class="hero-subtitle">
+                Engineered for precision, reliability, and deep-sea exploration. We build the tools that help you discover the unknown.
+            </p>
+            <div class="hero-actions">
+                <a href="#explore" class="btn btn-primary">Explore Products</a>
+                <a href="#documentation" class="btn btn-outline">Read the Docs</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features container">
+            <div class="feature-card">
+                <h3>High-Fidelity Control</h3>
+                <p>Experience zero-latency operations with our state-of-the-art tethering and control systems, designed for complex maneuvers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Robust Architecture</h3>
+                <p>Built to withstand extreme pressures and harsh marine environments, ensuring longevity and consistent performance.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Modular Payload</h3>
+                <p>Easily swap sensors, cameras, and robotic arms to adapt the SLV ROV for any underwater mission or research operation.</p>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <a href="https://devcss.devins.page"><img src="https://cdn.jsdelivr.net/npm/@intergrav/dev.css@4/badge.svg" alt="powered by dev.css" style="width: 65px; height: auto;"></a>
-        <p>Check out the <a href="https://github.com/razvan136/slvrov">source code</a> of this page!</p>
+    <footer class="site-footer container">
+        <div class="footer-content">
+            <p>&copy; 2026 SEL Technologies. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
