@@ -3,7 +3,7 @@
 [![](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/documentation/website_vector.svg)](https://slvrov.com)
 
 ## 🙋 What is this?
-This is a repo for all clubs under SLV ROV. I'm built using [dev.css](https://devcss.devins.page/), basic HTML, and hosted on GitHub Pages.
+This is a repo for all clubs under SLV ROV. I'm built using [dev.css](https://devcss.devins.page/), basic HTML, and hosted on GitHub Pages. We're in the process of evaluating moving to Vercel, supporting more advanced web technologies.
 
 ## ℹ️ History
 
